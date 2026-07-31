@@ -1,258 +1,653 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kush Saxena — Information Technology undergraduate. Backend development, data structures, and applied machine learning.">
-<title>Kush Saxena — schema</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  
+  <!-- SEO Meta Tags -->
+  <title>Kush Saxena — Software Engineer & Backend Developer | Portfolio</title>
+  <meta name="description" content="Kush Saxena — Information Technology undergraduate (Class of 2028 @ AKTU, CGPA 8.12). Software Engineering Intern at Infosys Springboard. Specializing in Backend Development (Java, Python), Relational Databases (MySQL, SQL), Data Structures & Algorithms, and Machine Learning.">
+  <meta name="keywords" content="Kush Saxena, Kush Saxena Portfolio, Software Engineer, Backend Developer, Java Developer, Python Developer, Infosys Springboard Intern, Prodigy InfoTech, AKTU B.Tech IT, Data Structures Algorithms, LeetCode, GeeksforGeeks, MySQL, Machine Learning">
+  <meta name="author" content="Kush Saxena">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kushsaxena12.github.io/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kushsaxena12.github.io/">
+  <meta property="og:title" content="Kush Saxena — Software Engineer & Backend Developer">
+  <meta property="og:description" content="Information Technology undergraduate @ AKTU (CGPA 8.12) & Software Engineering Intern at Infosys Springboard. Building robust backend systems in Java & Python.">
+  <meta property="og:image" content="kushimg2.jpeg">
+  <meta property="og:site_name" content="Kush Saxena Portfolio">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://kushsaxena12.github.io/">
+  <meta name="twitter:title" content="Kush Saxena — Software Engineer & Backend Developer">
+  <meta name="twitter:description" content="Information Technology undergraduate @ AKTU (CGPA 8.12) & Software Engineering Intern at Infosys Springboard. Building robust backend systems in Java & Python.">
+  <meta name="twitter:image" content="profile.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%2308090d'/><path d='M30 30L50 70L70 30' stroke='%23f59e0b' stroke-width='10' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='50' cy='30' r='6' fill='%2306b6d4'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kush Saxena",
+    "url": "https://kushsaxena12.github.io/",
+    "email": "mailto:kushsaxena070@gmail.com",
+    "telephone": "+918957778100",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Farrukhabad",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "India"
+    },
+    "jobTitle": "Software Engineering Intern",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Infosys Springboard"
+    },
+    "almaMater": {
+      "@type": "EducationalOrganization",
+      "name": "Dr. A.P.J. Abdul Kalam Technical University"
+    },
+    "sameAs": [
+      "https://github.com/KushSaxena12",
+      "https://linkedin.com/in/kush-saxena-5b00792b7",
+      "https://leetcode.com/u/_07kush/",
+      "https://www.geeksforgeeks.org/profile/kushsaxvgvg"
+    ],
+    "knowsAbout": [
+      "Java", "Python", "SQL", "Data Structures & Algorithms", "MySQL", "Relational Databases", "Object-Oriented Programming", "Machine Learning", "Spring Boot", "Git"
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<div class="rail" aria-hidden="true"><div class="rail-fill" id="railFill"></div></div>
+  <!-- Ambient Canvas Background -->
+  <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
 
-<header class="topbar">
-  <span class="topbar-key">Kush Saxena</span>
-  <nav class="topbar-nav">
-    <a href="#skills">skills</a>
-    <a href="#experience">experience</a>
-    <a href="#projects">projects</a>
-    <a href="#education">education</a>
-    <a href="#contact">contact</a>
-  </nav>
-</header>
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgress" aria-hidden="true"></div>
 
-<main>
+  <!-- Header Navigation Bar -->
+  <header class="topbar" id="topbar">
+    <div class="nav-container">
+      <a href="#top" class="nav-brand" aria-label="Kush Saxena Homepage">
+        <span class="brand-code">&lt;KS/&gt;</span>
+        <span class="brand-name">Kush Saxena</span>
+      </a>
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero-schema">
-      <p class="eyebrow">// primary_entity</p>
-      <h1 class="hero-title">
-        <span class="pk">kush_saxena</span><span class="cursor">_</span>
-      </h1>
-      <p class="hero-role">Information Technology undergraduate — Class of 2028</p>
-      <p class="hero-sub">Backend systems in Java &amp; Python, relational database design, and applied
-        machine learning. Currently interning at Infosys Springboard, building full-stack projects
-        against real SDLC practice.</p>
+      <nav class="topbar-nav" id="topbarNav" aria-label="Main Navigation">
+        <a href="#skills" class="nav-link"><span class="nav-num">01.</span> skills</a>
+        <a href="#experience" class="nav-link"><span class="nav-num">02.</span> experience</a>
+        <a href="#projects" class="nav-link"><span class="nav-num">03.</span> projects</a>
+        <a href="#education" class="nav-link"><span class="nav-num">04.</span> education</a>
+        <a href="#contact" class="nav-link"><span class="nav-num">05.</span> contact</a>
+      </nav>
 
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="mailto:kushsaxena070@gmail.com">Email me</a>
-        <a class="btn btn-ghost" href="https://github.com/KushSaxena12" target="_blank" rel="noopener">GitHub ↗</a>
-        <a class="btn btn-ghost" href="https://linkedin.com/in/kush-saxena-5b00792b7" target="_blank" rel="noopener">LinkedIn ↗</a>
-      </div>
+      <div class="nav-actions">
+        <span class="status-badge" title="Currently open to internship and software engineering roles">
+          <span class="status-dot"></span> open to roles
+        </span>
+        <a href="mailto:kushsaxena070@gmail.com" class="btn btn-sm btn-primary magnetic-btn ripple-btn">Email Me</a>
 
-      <div class="hero-fields">
-        <div class="field"><span class="fk">FK →</span> education <span class="ftype">B.Tech IT, CGPA 8.0+</span></div>
-        <div class="field"><span class="fk">FK →</span> experience <span class="ftype">Infosys Springboard, Prodigy InfoTech</span></div>
-        <div class="field"><span class="fk">FK →</span> projects <span class="ftype">2 shipped, database-backed</span></div>
-        <div class="field"><span class="fk">FK →</span> skills <span class="ftype">Java · Python · SQL · DSA</span></div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- SKILLS -->
-  <section class="section" id="skills">
-    <div class="section-head">
-      <span class="tag-num">relation 01</span>
-      <h2>skills</h2>
-      <p class="section-desc">Grouped by column family — what each tool is actually used for.</p>
-    </div>
-
-    <div class="table schema-table">
-      <div class="trow thead">
-        <div class="tcell col-key">column</div>
-        <div class="tcell col-val">values</div>
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <nav class="drawer-content" aria-label="Mobile Navigation">
+      <div class="drawer-header">
+        <span class="brand-code">&lt;KS/&gt; Navigation</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close Navigation Menu">&times;</button>
       </div>
-
-      <div class="trow" data-reveal>
-        <div class="tcell col-key">languages</div>
-        <div class="tcell col-val chips">
-          <span>Java</span><span>Python</span><span>C/C++</span><span>SQL</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span>
-        </div>
-      </div>
-
-      <div class="trow" data-reveal>
-        <div class="tcell col-key">cs_fundamentals</div>
-        <div class="tcell col-val chips">
-          <span>Data Structures &amp; Algorithms</span><span>OOP</span><span>DBMS</span><span>Operating Systems</span><span>Computer Networks</span>
-        </div>
-      </div>
-
-      <div class="trow" data-reveal>
-        <div class="tcell col-key">backend_and_data</div>
-        <div class="tcell col-val chips">
-          <span>JDBC</span><span>Spring Boot (basics)</span><span>RESTful APIs</span><span>MySQL</span><span>Relational DB Design</span>
-        </div>
-      </div>
-
-      <div class="trow" data-reveal>
-        <div class="tcell col-key">tools</div>
-        <div class="tcell col-val chips">
-          <span>Git</span><span>GitHub</span><span>Postman</span><span>VS Code</span><span>IntelliJ IDEA</span><span>Jupyter Notebook</span>
-        </div>
-      </div>
-
-      <div class="trow" data-reveal>
-        <div class="tcell col-key">ai_and_data</div>
-        <div class="tcell col-val chips">
-          <span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Generative AI / LLMs</span><span>Prompt Engineering</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
-    <div class="section-head">
-      <span class="tag-num">relation 02</span>
-      <h2>experience</h2>
-      <p class="section-desc">Ordered by start date, most recent first.</p>
-    </div>
-
-    <div class="record" data-reveal>
-      <div class="record-meta">
-        <span class="record-date">Jul 2026 — Present</span>
-        <span class="record-status status-active">active</span>
-      </div>
-      <h3 class="record-title">Software Engineering Intern</h3>
-      <p class="record-org">Infosys Springboard — Springboard Internship 7.0, Batch 2</p>
-      <ul class="record-list">
-        <li>Selected for an intensive 8-week virtual internship focused on core software engineering
-          principles, full-stack development, and modern industry technology stacks.</li>
-        <li>Building hands-on technical projects applying OOP and database management concepts to
-          real-world problems.</li>
-        <li>Working with industry mentors and peers to ship quality software components under
-          standard SDLC methodology.</li>
+      <ul class="drawer-links">
+        <li><a href="#skills" class="drawer-link"><span class="nav-num">01.</span> skills</a></li>
+        <li><a href="#experience" class="drawer-link"><span class="nav-num">02.</span> experience</a></li>
+        <li><a href="#projects" class="drawer-link"><span class="nav-num">03.</span> projects</a></li>
+        <li><a href="#education" class="drawer-link"><span class="nav-num">04.</span> education</a></li>
+        <li><a href="#contact" class="drawer-link"><span class="nav-num">05.</span> contact</a></li>
       </ul>
-    </div>
-
-    <div class="record" data-reveal>
-      <div class="record-meta">
-        <span class="record-date">Jun 2025 — Jul 2025</span>
-        <span class="record-status">complete</span>
+      <div class="drawer-footer">
+        <a href="mailto:kushsaxena070@gmail.com" class="btn btn-primary btn-block">Email Me</a>
       </div>
-      <h3 class="record-title">Software Development Intern (Remote)</h3>
-      <p class="record-org">Prodigy InfoTech</p>
-      <ul class="record-list">
-        <li>Designed and optimized modular Java backend components using core OOP principles and
-          clean design patterns.</li>
-        <li>Worked in an agile SDLC workflow: debugging, defect resolution, and version control with
-          Git and GitHub.</li>
-        <li>Implemented automated testing workflows and integrated LLM tooling to improve code
-          reliability and test coverage.</li>
+    </nav>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="top">
+      <div class="hero-flex">
+        <div class="hero-schema" data-reveal="fade-right">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">kush_saxena.json</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="pk">Kush Saxena</span><span class="cursor">_</span>
+          </h1>
+
+          <div class="hero-typewriter-box">
+            <span class="typewriter-prefix">&gt; </span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <p class="hero-role">Information Technology Undergraduate — Class of 2028 (CGPA 8.12)</p>
+          <p class="hero-sub">
+            Backend systems developer skilled in Java &amp; Python, relational database architecture, 
+            data structures &amp; algorithms, and applied machine learning. Currently interning at 
+            <strong>Infosys Springboard</strong>, building production-ready software solutions following standard SDLC practices.
+          </p>
+
+          <!-- Quick Actions / CTAs -->
+          <div class="hero-ctas">
+            <a class="btn btn-primary magnetic-btn ripple-btn" href="mailto:kushsaxena070@gmail.com" id="heroEmailBtn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Email me</span>
+            </a>
+
+            <button class="btn btn-secondary magnetic-btn ripple-btn" id="copyEmailBtn" data-email="kushsaxena070@gmail.com" aria-label="Copy Email Address to Clipboard">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span id="copyBtnText">Copy Email</span>
+            </button>
+
+            <!-- Social Icon Row with Official Logos & Hover Color Tooltips -->
+            <div class="icon-row">
+              <a class="icon-btn icon-github" href="https://github.com/KushSaxena12" target="_blank" rel="noopener noreferrer" data-label="GitHub" aria-label="GitHub Profile">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.44-2.7 5.42-5.26 5.7.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .31.21.68.8.56A10.99 10.99 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              </a>
+
+              <a class="icon-btn icon-linkedin" href="https://linkedin.com/in/kush-saxena-5b00792b7" target="_blank" rel="noopener noreferrer" data-label="LinkedIn" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+              </a>
+
+              <a class="icon-btn icon-leetcode" href="https://leetcode.com/u/_07kush/" target="_blank" rel="noopener noreferrer" data-label="LeetCode" aria-label="LeetCode Profile">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.515 1.879 0 .515-.515.515-1.365 0-1.879l-2.697-2.607c-1.001-1.002-2.335-1.504-3.702-1.504s-2.701.502-3.703 1.504L3.524 10.83c-1.001 1.002-1.503 2.335-1.503 3.702s.502 2.701 1.503 3.703l4.332 4.363c1.002 1.002 2.336 1.504 3.703 1.504s2.701-.502 3.702-1.504l2.697-2.607c.515-.515.515-1.365 0-1.879s-1.365-.515-1.879 0zM20.811 13.01H10.666c-.728 0-1.319.591-1.319 1.319s.591 1.319 1.319 1.319h10.145c.728 0 1.319-.591 1.319-1.319s-.591-1.319-1.319-1.319zM15.115 5.868l2.697-2.607c.515-.514.515-1.365 0-1.879s-1.365-.515-1.879 0l-2.697 2.607c-.515.515-.515 1.365 0 1.879.514.515 1.365.515 1.879 0z"/></svg>
+              </a>
+
+              <a class="icon-btn icon-gfg" href="https://www.geeksforgeeks.org/profile/kushsaxvgvg" target="_blank" rel="noopener noreferrer" data-label="GeeksforGeeks" aria-label="GeeksforGeeks Profile">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.143 8.358c-.287.41-.645.748-1.074 1.015a5.578 5.578 0 0 1-1.636.635l.07.243c.487.054.945.18 1.374.379.43.198.81.47 1.14.815.33.344.591.758.78 1.242.19.484.285 1.025.285 1.624 0 .626-.118 1.205-.353 1.737a4.938 4.938 0 0 1-.986 1.45 4.887 4.887 0 0 1-1.538 1.025c-.6.252-1.26.378-1.98.378-.718 0-1.378-.126-1.98-.378a4.887 4.887 0 0 1-1.538-1.025 4.938 4.938 0 0 1-.986-1.45 5.372 5.372 0 0 1-.353-1.737c0-.599.095-1.14.285-1.624.19-.484.45-.898.78-1.242.33-.345.71-.617 1.14-.815.43-.199.887-.325 1.374-.379l.07-.243a5.578 5.578 0 0 1-1.636-.635c-.43-.267-.787-.605-1.074-1.015A4.398 4.398 0 0 1 8.87 6.47c0-.585.105-1.127.315-1.626.21-.499.5-.928.87-1.286A4.81 4.81 0 0 1 11.37.525C11.895.175 12.486 0 13.143 0c.657 0 1.248.175 1.773.525a4.81 4.81 0 0 1 1.315 1.033c.37.358.66.787.87 1.286.21.499.315 1.041.315 1.626 0 .736-.142 1.365-.427 1.888zM12 2a2.38 2.38 0 0 0-.714.542c-.2.203-.357.442-.471.718-.114.275-.171.572-.171.89 0 .319.057.616.171.891.114.276.271.515.471.718.2.203.438.358.714.465.276.107.576.16.9.16s.624-.053.9-.16c.276-.107.514-.262.714-.465.2-.203.357-.442.471-.718.114-.275.171-.572.171-.89 0-.318-.057-.615-.171-.89a2.296 2.296 0 0 0-.471-.718A2.38 2.38 0 0 0 13.8 2 2.38 2.38 0 0 0 12 2zm1.143 14.88c0-.448-.077-.859-.231-1.233a3.02 3.02 0 0 0-.64-.993c-.273-.274-.6-.486-.98-.636a3.266 3.266 0 0 0-1.242-.225c-.448 0-.862.075-1.242.225-.38.15-.707.362-.98.636a3.02 3.02 0 0 0-.64.993c-.154.374-.231.785-.231 1.233 0 .448.077.859.231 1.233.154.374.367.705.64.993.273.288.6.505.98.651a3.266 3.266 0 0 0 1.242.22c.448 0 .862-.073 1.242-.22.38-.146.707-.363.98-.651.273-.288.486-.619.64-.993.154-.374.231-.785.231-1.233z"/></svg>
+              </a>
+
+              <a class="icon-btn icon-mail" href="mailto:kushsaxena070@gmail.com" data-label="Email" aria-label="Send Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2 12 12.8l8.5-6.6"/></svg>
+              </a>
+
+              <a class="icon-btn icon-phone" href="tel:+918957778100" data-label="Call" aria-label="Call Phone">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4.5c0-.6.5-1 1-1H8c.5 0 1 .4 1.1.9l.7 3.4c.1.5-.1 1-.5 1.3L7.8 10.4c1 2.4 3 4.4 5.4 5.4l1.3-1.5c.3-.4.8-.6 1.3-.5l3.4.7c.5.1.9.6.9 1.1v3c0 .5-.4 1-1 1C11 20.5 3.5 13 3.5 5.5"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Database Schema Fields -->
+          <div class="hero-fields">
+            <div class="field"><span class="fk">FK &rarr;</span> education <span class="ftype">B.Tech IT, CGPA 8.12</span></div>
+            <div class="field"><span class="fk">FK &rarr;</span> experience <span class="ftype">Infosys Springboard, Prodigy InfoTech</span></div>
+            <div class="field"><span class="fk">FK &rarr;</span> projects <span class="ftype">2 shipped, database-backed</span></div>
+            <div class="field"><span class="fk">FK &rarr;</span> skills <span class="ftype">Java · DSA · Python · SQL</span></div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Profile Card with Change Photo Feature & SVG Fallback -->
+        <div class="hero-visual" data-reveal="fade-left">
+          <div class="photo-ring-wrapper" id="photoWrapper">
+            <div class="photo-ring">
+              <img id="userPhoto" src="profile.jpg" class="hero-photo" width="180" height="180" alt="Kush Saxena Profile Picture" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\' fill=\'%23121822\'><rect width=\'200\' height=\'200\' fill=\'%23121822\'/><circle cx=\'100\' cy=\'75\' r=\'42\' fill=\'%23f59e0b\'/><path d=\'M30 180c0-38 30-60 70-60s70 22 70 60\' fill=\'%2306b6d4\'/></svg>';">
+              
+              <!-- Change Photo Overlay Button -->
+              <label for="photoUploadInput" class="photo-upload-overlay" title="Click to upload custom profile photo">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                <span>Upload</span>
+              </label>
+              <input type="file" id="photoUploadInput" accept="image/*" style="display:none;">
+            </div>
+            
+            <span class="status-badge" title="Status: Open to Internships and Full-time roles">
+              <span class="status-dot"></span> Open to Internships
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section" id="skills">
+      <div class="section-head" data-reveal="fade-up">
+        <span class="tag-num">relation 01</span>
+        <h2>skills &amp; competencies</h2>
+        <p class="section-desc">Categorized column families of technologies, languages, and tools I use to build systems.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs" data-reveal="fade-up">
+        <button class="tab-btn active" data-filter="all">All Skills</button>
+        <button class="tab-btn" data-filter="languages">Languages</button>
+        <button class="tab-btn" data-filter="cs">CS Fundamentals</button>
+        <button class="tab-btn" data-filter="backend">Backend &amp; DB</button>
+        <button class="tab-btn" data-filter="tools">Tools</button>
+        <button class="tab-btn" data-filter="ai">AI &amp; Data Science</button>
+      </div>
+
+      <!-- Skills Schema Table / Bento Grid -->
+      <div class="table schema-table" data-reveal="fade-up">
+        <div class="trow thead">
+          <div class="tcell col-key">Column Family</div>
+          <div class="tcell col-val">Technologies &amp; Proficiency</div>
+        </div>
+
+        <div class="trow skill-category-row" data-category="languages" data-reveal="fade-up">
+          <div class="tcell col-key">
+            <span class="col-icon">⚡</span>
+            <span>languages</span>
+          </div>
+          <div class="tcell col-val chips">
+            <span class="chip" data-skill="Java"><img src="https://cdn.simpleicons.org/oracle/F80000" alt="Java" width="14" height="14"> Java</span>
+            <span class="chip" data-skill="Python"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" width="14" height="14"> Python</span>
+            <span class="chip" data-skill="C/C++"><img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C/C++" width="14" height="14"> C/C++</span>
+            <span class="chip" data-skill="SQL"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="SQL" width="14" height="14"> SQL</span>
+            <span class="chip" data-skill="HTML5"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" width="14" height="14"> HTML5</span>
+            <span class="chip" data-skill="CSS3"><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3" width="14" height="14"> CSS3</span>
+            <span class="chip" data-skill="JavaScript"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" width="14" height="14"> JavaScript</span>
+          </div>
+        </div>
+
+        <div class="trow skill-category-row" data-category="cs" data-reveal="fade-up">
+          <div class="tcell col-key">
+            <span class="col-icon">🧠</span>
+            <span>cs_fundamentals</span>
+          </div>
+          <div class="tcell col-val chips">
+            <span class="chip highlight">Data Structures &amp; Algorithms</span>
+            <span class="chip">Object-Oriented Programming (OOP)</span>
+            <span class="chip">Database Management Systems (DBMS)</span>
+            <span class="chip">Operating Systems</span>
+            <span class="chip">Computer Networks</span>
+          </div>
+        </div>
+
+        <div class="trow skill-category-row" data-category="backend" data-reveal="fade-up">
+          <div class="tcell col-key">
+            <span class="col-icon">🗄️</span>
+            <span>backend_and_data</span>
+          </div>
+          <div class="tcell col-val chips">
+            <span class="chip"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" width="14" height="14"> MySQL</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/springboot/6DB33F" alt="Spring Boot" width="14" height="14"> Spring Boot (Basics)</span>
+            <span class="chip">JDBC</span>
+            <span class="chip">RESTful APIs</span>
+            <span class="chip">Relational Schema Design</span>
+            <span class="chip">Query Optimization</span>
+          </div>
+        </div>
+
+        <div class="trow skill-category-row" data-category="tools" data-reveal="fade-up">
+          <div class="tcell col-key">
+            <span class="col-icon">🛠️</span>
+            <span>tools_and_env</span>
+          </div>
+          <div class="tcell col-val chips">
+            <span class="chip"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git" width="14" height="14"> Git</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub" width="14" height="14"> GitHub</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/postman/FF6C37" alt="Postman" width="14" height="14"> Postman</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code" width="14" height="14"> VS Code</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/intellijidea/000000" alt="IntelliJ IDEA" width="14" height="14"> IntelliJ IDEA</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/jupyter/F37626" alt="Jupyter Notebook" width="14" height="14"> Jupyter Notebook</span>
+          </div>
+        </div>
+
+        <div class="trow skill-category-row" data-category="ai" data-reveal="fade-up">
+          <div class="tcell col-key">
+            <span class="col-icon">🤖</span>
+            <span>ai_and_machine_learning</span>
+          </div>
+          <div class="tcell col-val chips">
+            <span class="chip"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="Scikit-learn" width="14" height="14"> Scikit-learn</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas" width="14" height="14"> Pandas</span>
+            <span class="chip"><img src="https://cdn.simpleicons.org/numpy/013243" alt="NumPy" width="14" height="14"> NumPy</span>
+            <span class="chip">Generative AI / LLMs</span>
+            <span class="chip">Prompt Engineering</span>
+            <span class="chip">Predictive Modeling</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section" id="experience">
+      <div class="section-head" data-reveal="fade-up">
+        <span class="tag-num">relation 02</span>
+        <h2>experience</h2>
+        <p class="section-desc">Professional software engineering roles, internships, and industry practical work.</p>
+      </div>
+
+      <!-- Experience Record 1 -->
+      <div class="record" data-reveal="fade-up">
+        <div class="record-header">
+          <div class="record-meta">
+            <span class="record-date">Jul 2026 — Present</span>
+            <span class="record-status status-active">active internship</span>
+          </div>
+          <h3 class="record-title">Software Engineering Intern</h3>
+          <p class="record-org">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Infosys Springboard — Springboard Internship 7.0, Batch 2
+          </p>
+        </div>
+
+        <ul class="record-list">
+          <li>Selected for an intensive 8-week virtual software engineering internship focused on core CS principles, full-stack development, and modern industry technology stacks.</li>
+          <li>Building hands-on technical projects applying Object-Oriented Programming (OOP) and database management concepts to solve real-world problems.</li>
+          <li>Collaborating with industry mentors and engineering peers to ship production-ready software components under standard SDLC methodology.</li>
+        </ul>
+
+        <div class="stack-row">
+          <span>Java</span><span>Spring Boot</span><span>SQL</span><span>SDLC</span><span>OOP</span><span>Git</span>
+        </div>
+      </div>
+
+      <!-- Experience Record 2 -->
+      <div class="record" data-reveal="fade-up">
+        <div class="record-header">
+          <div class="record-meta">
+            <span class="record-date">Jun 2025 — Jul 2025</span>
+            <span class="record-status">completed</span>
+          </div>
+          <h3 class="record-title">Software Development Intern (Remote)</h3>
+          <p class="record-org">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+            Prodigy InfoTech
+          </p>
+        </div>
+
+        <ul class="record-list">
+          <li>Designed and optimized modular Java backend components using core OOP principles and clean design patterns.</li>
+          <li>Worked in an agile SDLC workflow: debugging, defect resolution, code reviews, and version control with Git and GitHub.</li>
+          <li>Implemented automated testing workflows and integrated LLM tooling to improve code reliability, test coverage, and developer efficiency.</li>
+        </ul>
+
+        <div class="stack-row">
+          <span>Java</span><span>OOP</span><span>Agile SDLC</span><span>Git / GitHub</span><span>Testing</span><span>LLM Integration</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+      <div class="section-head" data-reveal="fade-up">
+        <span class="tag-num">relation 03</span>
+        <h2>featured projects</h2>
+        <p class="section-desc">Production-ready applications backed by real databases and machine learning models.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 01 -->
+        <article class="project-card" data-reveal="fade-up">
+          <div class="project-card-header">
+            <span class="project-id">project_id: 001</span>
+            <span class="project-badge">database_backed</span>
+          </div>
+
+          <h3 class="project-title">Blood Bank Management System</h3>
+          <p class="project-desc">
+            A comprehensive database-driven web application designed to automate real-time blood inventory tracking, donor registrations, and recipient record management.
+          </p>
+
+          <ul class="record-list">
+            <li>Designed and optimized complex SQL queries and relational schemas in MySQL for data consistency and sub-second record retrieval.</li>
+            <li>Implemented backend business logic in Java for donor registration workflows and automated inventory updates.</li>
+          </ul>
+
+          <div class="stack-row">
+            <span>Java</span><span>MySQL</span><span>HTML/CSS</span><span>JDBC</span><span>SQL</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://github.com/KushSaxena12" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary magnetic-btn ripple-btn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.44-2.7 5.42-5.26 5.7.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .31.21.68.8.56A10.99 10.99 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              <span>GitHub Repo</span>
+            </a>
+
+            <button class="btn btn-sm btn-outline magnetic-btn ripple-btn open-modal-btn" data-project="001">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span>System Demo</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- Project 02 -->
+        <article class="project-card" data-reveal="fade-up">
+          <div class="project-card-header">
+            <span class="project-id">project_id: 002</span>
+            <span class="project-badge">machine_learning</span>
+          </div>
+
+          <h3 class="project-title">Campus Recruitment Prediction System</h3>
+          <p class="project-desc">
+            Predictive machine learning models that evaluate student academic performance indicators and skill parameters against campus placement outcomes.
+          </p>
+
+          <ul class="record-list">
+            <li>Built Logistic Regression and Decision Tree classification models in Python to predict placement likelihood.</li>
+            <li>Ran full data preprocessing, feature engineering, and cross-validation pipelines to maximize model accuracy.</li>
+          </ul>
+
+          <div class="stack-row">
+            <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Machine Learning</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://github.com/KushSaxena12" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary magnetic-btn ripple-btn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.44-2.7 5.42-5.26 5.7.41.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .31.21.68.8.56A10.99 10.99 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              <span>GitHub Repo</span>
+            </a>
+
+            <button class="btn btn-sm btn-outline magnetic-btn ripple-btn open-modal-btn" data-project="002">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+              <span>Model Insights</span>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section" id="education">
+      <div class="section-head" data-reveal="fade-up">
+        <span class="tag-num">relation 04</span>
+        <h2>education &amp; background</h2>
+        <p class="section-desc">Academic qualifications, degrees, and institutions.</p>
+      </div>
+
+      <div class="table schema-table" data-reveal="fade-up">
+        <div class="trow thead">
+          <div class="tcell col-key">Institution</div>
+          <div class="tcell col-val">Degree / Grade</div>
+          <div class="tcell col-date">Period</div>
+        </div>
+
+        <div class="trow" data-reveal="fade-up">
+          <div class="tcell col-key">Dr. A.P.J. Abdul Kalam Technical University, Uttar Pradesh</div>
+          <div class="tcell col-val">B.Tech, Information Technology — <strong>CGPA 8.12</strong></div>
+          <div class="tcell col-date">Aug 2024 – May 2028</div>
+        </div>
+
+        <div class="trow" data-reveal="fade-up">
+          <div class="tcell col-key">Modern Public School, Farrukhabad</div>
+          <div class="tcell col-val">Class XII (ISC) — <strong>District Rank 4</strong></div>
+          <div class="tcell col-date">2023 – 2024</div>
+        </div>
+      </div>
+
+      <!-- Certifications & Achievements -->
+      <div class="section-head" style="margin-top: 3.5rem;" data-reveal="fade-up">
+        <span class="tag-num">relation 05</span>
+        <h2>certifications &amp; achievements</h2>
+      </div>
+
+      <ul class="achieve-list">
+        <li data-reveal="fade-up">
+          <span class="dot"></span>
+          <div>
+            <strong>100+ Algorithmic Problems Solved</strong> — Solved competitive data structure and algorithm problems across LeetCode &amp; GeeksforGeeks, maintaining strict optimal time/space complexity standards.
+          </div>
+        </li>
+        <li data-reveal="fade-up">
+          <span class="dot"></span>
+          <div>
+            <strong>HackerRank 4-Star Badge in Java</strong> — Earned official 4-Star distinction in Java domain on HackerRank; completed verified Python and Java skill certifications.
+          </div>
+        </li>
+        <li data-reveal="fade-up">
+          <span class="dot"></span>
+          <div>
+            <strong>District Rank 4 in ISC Class XII</strong> — Secured 4th rank in the entire district for Class XII ISC examinations; consistently maintaining an 8.12 CGPA in B.Tech Information Technology.
+          </div>
+        </li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <div class="section-head">
-      <span class="tag-num">relation 03</span>
-      <h2>projects</h2>
-      <p class="section-desc">Two records, each backed by a real database or model.</p>
-    </div>
+    <!-- CONTACT SECTION -->
+    <section class="section contact" id="contact">
+      <div class="section-head" data-reveal="fade-up">
+        <span class="tag-num">connect</span>
+        <h2>get in touch</h2>
+        <p class="section-desc">Currently open for internship, co-op, and entry-level software engineering roles.</p>
+      </div>
 
-    <div class="projects-grid">
-      <article class="project-card" data-reveal>
-        <p class="project-id">project_id: 001</p>
-        <h3>Blood Bank Management System</h3>
-        <p class="project-desc">Database-driven web application that automates real-time blood
-          inventory tracking and donor/recipient record management.</p>
-        <ul class="record-list">
-          <li>Optimized complex SQL queries and relational schemas in MySQL for data consistency
-            and sub-second record retrieval.</li>
-          <li>Implemented backend business logic in Java for donor registration workflows and
-            automated inventory updates.</li>
-        </ul>
-        <div class="stack-row">
-          <span>Java</span><span>MySQL</span><span>HTML/CSS</span><span>JDBC</span>
+      <div class="contact-grid">
+        <!-- Direct Connection Info -->
+        <div class="connection-card" data-reveal="fade-right">
+          <div class="connection-string">
+            <span class="conn-key">connection_string:</span>
+            <span class="conn-val">kushsaxena070@gmail.com</span>
+          </div>
+
+          <div class="contact-methods">
+            <a href="mailto:kushsaxena070@gmail.com" class="contact-method-item">
+              <div class="method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.2"/><path d="M3.5 6.2 12 12.8l8.5-6.6"/></svg>
+              </div>
+              <div class="method-details">
+                <span class="method-label">Direct Email</span>
+                <span class="method-value">kushsaxena070@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="tel:+918957778100" class="contact-method-item">
+              <div class="method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5c0-.6.5-1 1-1H8c.5 0 1 .4 1.1.9l.7 3.4c.1.5-.1 1-.5 1.3L7.8 10.4c1 2.4 3 4.4 5.4 5.4l1.3-1.5c.3-.4.8-.6 1.3-.5l3.4.7c.5.1.9.6.9 1.1v3c0 .5-.4 1-1 1C11 20.5 3.5 13 3.5 5.5"/></svg>
+              </div>
+              <div class="method-details">
+                <span class="method-label">Phone / WhatsApp</span>
+                <span class="method-value">+91-8957778100</span>
+              </div>
+            </a>
+
+            <div class="contact-method-item">
+              <div class="method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="method-details">
+                <span class="method-label">Location</span>
+                <span class="method-value">Farrukhabad, Uttar Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="connection-actions">
+            <button class="btn btn-primary btn-block magnetic-btn ripple-btn" id="copyEmailBtnContact" data-email="kushsaxena070@gmail.com">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span id="copyBtnContactText">Copy Email Address</span>
+            </button>
+          </div>
         </div>
-      </article>
 
-      <article class="project-card" data-reveal>
-        <p class="project-id">project_id: 002</p>
-        <h3>Campus Recruitment Prediction System</h3>
-        <p class="project-desc">Predictive machine learning models that evaluate student academic
-          indicators against placement outcomes.</p>
-        <ul class="record-list">
-          <li>Built Logistic Regression and Decision Tree models in Python to classify placement
-            likelihood.</li>
-          <li>Ran full data preprocessing, feature engineering, and cross-validation to maximize
-            classification accuracy.</li>
-        </ul>
-        <div class="stack-row">
-          <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span>
-        </div>
-      </article>
-    </div>
-  </section>
+        <!-- Quick Interactive Contact Form -->
+        <form class="contact-form" id="contactForm" data-reveal="fade-left" novalidate>
+          <h3 class="form-title">Send a Direct Message</h3>
 
-  <!-- EDUCATION -->
-  <section class="section" id="education">
-    <div class="section-head">
-      <span class="tag-num">relation 04</span>
-      <h2>education</h2>
-    </div>
+          <div class="form-group">
+            <label for="formName" class="form-label">Your Name</label>
+            <input type="text" id="formName" name="name" class="form-input" placeholder="e.g. Sarah Jenkins" required>
+          </div>
 
-    <div class="table schema-table">
-      <div class="trow thead">
-        <div class="tcell col-key">institution</div>
-        <div class="tcell col-val">detail</div>
-        <div class="tcell col-date">period</div>
+          <div class="form-group">
+            <label for="formEmail" class="form-label">Your Email</label>
+            <input type="email" id="formEmail" name="email" class="form-input" placeholder="e.g. sarah@company.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="formMessage" class="form-label">Message</label>
+            <textarea id="formMessage" name="message" class="form-textarea" rows="4" placeholder="Hi Kush, I'd like to discuss an opportunity..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block magnetic-btn ripple-btn" id="formSubmitBtn">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span>Send Message</span>
+          </button>
+        </form>
       </div>
-      <div class="trow" data-reveal>
-        <div class="tcell col-key">AKGEC</div>
-        <div class="tcell col-val">B.Tech, Information Technology — CGPA 8.0+</div>
-        <div class="tcell col-date">Aug 2024 – May 2028</div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-schema">-- end of schema &middot; engineered with precision by <strong>Kush Saxena</strong></p>
+      <div class="footer-links">
+        <a href="https://github.com/KushSaxena12" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
+        <a href="https://linkedin.com/in/kush-saxena-5b00792b7" target="_blank" rel="noopener noreferrer">LinkedIn</a> &bull;
+        <a href="https://leetcode.com/u/_07kush/" target="_blank" rel="noopener noreferrer">LeetCode</a> &bull;
+        <a href="https://www.geeksforgeeks.org/profile/kushsaxvgvg" target="_blank" rel="noopener noreferrer">GeeksforGeeks</a>
       </div>
-      <div class="trow" data-reveal>
-        <div class="tcell col-key">Modern Public School, Farrukhabad</div>
-        <div class="tcell col-val">Class XII (ISC) — 88.6%, District Rank 4</div>
-        <div class="tcell col-date">2023 – 2024</div>
+      <a href="#top" class="back-to-top-btn" aria-label="Back to Top">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Floating Toast Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Project Live Demo Modal -->
+  <div id="projectModal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <h3 id="modalTitle" class="modal-title">Project Details</h3>
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Dynamic Content injected via JS -->
       </div>
     </div>
+  </div>
 
-    <div class="section-head" style="margin-top:3.5rem;">
-      <span class="tag-num">relation 05</span>
-      <h2>certifications &amp; achievements</h2>
-    </div>
-    <ul class="achieve-list">
-      <li data-reveal><span class="dot"></span> Solved 100+ algorithmic problems across LeetCode and GeeksforGeeks, with a focus on time/space complexity.</li>
-      <li data-reveal><span class="dot"></span> HackerRank 4-Star Badge in Java; completed Python and Java certifications.</li>
-      <li data-reveal><span class="dot"></span> District Rank 4 in ISC Class XII (88.6%); maintaining 8.0+ CGPA in B.Tech IT.</li>
-    </ul>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section contact" id="contact">
-    <div class="section-head">
-      <span class="tag-num">connect</span>
-      <h2>get in touch</h2>
-      <p class="section-desc">Open to internship and entry-level backend / software engineering roles.</p>
-    </div>
-
-    <div class="connection-string">
-      <span class="conn-key">connection</span>
-      <span class="conn-val">kushsaxena070@gmail.com · +91-8957778100 · Farrukhabad, UP, India</span>
-    </div>
-
-    <div class="hero-ctas">
-      <a class="btn btn-primary" href="mailto:kushsaxena070@gmail.com">Send an email</a>
-      <a class="btn btn-ghost" href="https://github.com/KushSaxena12" target="_blank" rel="noopener">github.com/KushSaxena12</a>
-      <a class="btn btn-ghost" href="https://linkedin.com/in/kush-saxena-5b00792b7" target="_blank" rel="noopener">LinkedIn ↗</a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <p>-- end of schema · built by Kush Saxena</p>
-</footer>
-
-<script src="script.js"></script>
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
