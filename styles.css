@@ -57,6 +57,7 @@ Styles · CSS
   --chrome-bg: rgba(8, 9, 13, 0.82);
   --chrome-bg-strong: rgba(8, 9, 13, 0.92);
   --chrome-bg-footer: rgba(8, 9, 13, 0.95);
+  --key-hover: #f59e0b;
 }
  
 /* ---------- Light Theme Overrides ----------
@@ -97,6 +98,7 @@ html.light-mode {
   --chrome-bg: rgba(248, 250, 252, 0.85);
   --chrome-bg-strong: rgba(248, 250, 252, 0.94);
   --chrome-bg-footer: rgba(238, 242, 247, 0.97);
+  --key-hover: #92400e;
 }
  
 html.light-mode .bg-canvas {
@@ -313,7 +315,7 @@ a {
 .status-badge {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: #a7f3d0;
+  color: var(--emerald);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -533,7 +535,7 @@ html.light-mode .theme-toggle .icon-moon {
 }
  
 .btn-primary:hover {
-  background: #f59e0b;
+  background: var(--key-hover);
   box-shadow: 0 6px 24px var(--key-glow);
   transform: translateY(-2px);
 }
@@ -962,7 +964,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
-  color: var(--text);
+  color: #ffffff;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   opacity: 0;
