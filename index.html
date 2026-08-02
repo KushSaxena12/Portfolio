@@ -105,6 +105,11 @@
         </span>
         <a href="mailto:kushsaxena070@gmail.com" class="btn btn-sm btn-primary magnetic-btn ripple-btn">Email Me</a>
 
+        <button class="theme-toggle nav-theme-btn" id="themeToggleBtn" aria-label="Toggle light and dark theme" title="Toggle light / dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
@@ -130,7 +135,12 @@
         <li><a href="#contact" class="drawer-link"><span class="nav-num">05.</span> contact</a></li>
       </ul>
       <div class="drawer-footer">
-        <a href="mailto:kushsaxena070@gmail.com" class="btn btn-primary btn-block">Email Me</a>
+        <button class="theme-toggle btn btn-secondary btn-block" id="themeToggleBtnMobile" aria-label="Toggle light and dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span id="themeToggleLabelMobile">Switch to Light Mode</span>
+        </button>
+        <a href="mailto:kushsaxena070@gmail.com" class="btn btn-primary btn-block" style="margin-top: 0.75rem;">Email Me</a>
       </div>
     </nav>
   </div>
@@ -217,7 +227,7 @@
         <div class="hero-visual" data-reveal="fade-left">
           <div class="photo-ring-wrapper" id="photoWrapper">
             <div class="photo-ring">
-             <img id="userPhoto" src="kushimg2.jpeg" class="hero-photo" width="180" height="180" alt="Kush Saxena Profile Picture" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\' fill=\'%23121822\'><rect width=\'200\' height=\'200\' fill=\'%23121822\'/><circle cx=\'100\' cy=\'75\' r=\'42\' fill=\'%23f59e0b\'/><path d=\'M30 180c0-38 30-60 70-60s70 22 70 60\' fill=\'%2306b6d4\'/></svg>';">
+              <img id="userPhoto" src="profile.jpg" class="hero-photo" width="180" height="180" alt="Kush Saxena Profile Picture" onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\' fill=\'%23121822\'><rect width=\'200\' height=\'200\' fill=\'%23121822\'/><circle cx=\'100\' cy=\'75\' r=\'42\' fill=\'%23f59e0b\'/><path d=\'M30 180c0-38 30-60 70-60s70 22 70 60\' fill=\'%2306b6d4\'/></svg>';">
               
               <!-- Change Photo Overlay Button -->
               <label for="photoUploadInput" class="photo-upload-overlay" title="Click to upload custom profile photo">
