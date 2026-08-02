@@ -2,12 +2,45 @@
  * KUSH SAXENA — PREMIUM PORTFOLIO INTERACTIVE SCRIPT
  * Vanilla JS only — Zero Frameworks
  */
-
+ 
+// Apply saved theme immediately (before DOMContentLoaded) so the page
+// never flashes the wrong theme on load.
+(function initTheme() {
+  const savedTheme = localStorage.getItem('kush_portfolio_theme');
+  if (savedTheme === 'light') {
+    document.documentElement.classList.add('light-mode');
+  }
+})();
+ 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Theme Toggle (Dark / Light Mode)
+  const themeToggleBtns = document.querySelectorAll('.theme-toggle');
+  const themeToggleLabelMobile = document.getElementById('themeToggleLabelMobile');
+  const htmlEl = document.documentElement;
+ 
+  function updateThemeLabel() {
+    if (themeToggleLabelMobile) {
+      themeToggleLabelMobile.textContent = htmlEl.classList.contains('light-mode')
+        ? 'Switch to Dark Mode'
+        : 'Switch to Light Mode';
+    }
+  }
+ 
+  updateThemeLabel();
+ 
+  themeToggleBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const isLight = htmlEl.classList.toggle('light-mode');
+      localStorage.setItem('kush_portfolio_theme', isLight ? 'light' : 'dark');
+      updateThemeLabel();
+      showToast(isLight ? 'Light theme enabled' : 'Dark theme enabled', 'info');
+    });
+  });
+ 
   // 1. Top Scroll Progress Bar & Sticky Header
   const scrollProgress = document.getElementById('scrollProgress');
   const topbar = document.getElementById('topbar');
-
+ 
   function updateScrollProgress() {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -16,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (scrollProgress) {
       scrollProgress.style.width = `${scrollPct}%`;
     }
-
+ 
     if (topbar) {
       if (scrollTop > 40) {
         topbar.classList.add('scrolled');
@@ -25,19 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
-
+ 
   window.addEventListener('scroll', updateScrollProgress, { passive: true });
   updateScrollProgress();
-
+ 
   // 2. Profile Photo Upload & LocalStorage Persistence
   const userPhoto = document.getElementById('userPhoto');
   const photoUploadInput = document.getElementById('photoUploadInput');
-
+ 
   // Check saved custom photo in localStorage
   if (userPhoto && localStorage.getItem('kush_portfolio_photo')) {
     userPhoto.src = localStorage.getItem('kush_portfolio_photo');
   }
-
+ 
   if (photoUploadInput && userPhoto) {
     photoUploadInput.addEventListener('change', (e) => {
       const file = e.target.files[0];
@@ -57,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
+ 
   // 3. Ambient Canvas Particle Constellation
   const canvas = document.getElementById('bgCanvas');
   if (canvas) {
@@ -66,13 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let animationFrameId;
     let mouseX = -1000;
     let mouseY = -1000;
-
+ 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       initParticles();
     }
-
+ 
     function initParticles() {
       particles = [];
       const particleCount = Math.min(Math.floor(window.innerWidth / 18), 75);
@@ -89,34 +122,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     }
-
+ 
     function drawParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+ 
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
         p.x += p.vx;
         p.y += p.vy;
-
+ 
         if (p.x < 0) p.x = canvas.width;
         if (p.x > canvas.width) p.x = 0;
         if (p.y < 0) p.y = canvas.height;
         if (p.y > canvas.height) p.y = 0;
-
+ 
         // Render Particle Dot
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
         ctx.globalAlpha = p.alpha;
         ctx.fill();
-
+ 
         // Connect nearby particles
         for (let j = i + 1; j < particles.length; j++) {
           const p2 = particles[j];
           const dx = p.x - p2.x;
           const dy = p.y - p2.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-
+ 
           if (dist < 110) {
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
@@ -127,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.stroke();
           }
         }
-
+ 
         // Mouse Interactivity
         const mdx = p.x - mouseX;
         const mdy = p.y - mouseY;
@@ -142,11 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
           ctx.stroke();
         }
       }
-
+ 
       ctx.globalAlpha = 1;
       animationFrameId = requestAnimationFrame(drawParticles);
     }
-
+ 
     window.addEventListener('resize', resizeCanvas);
     window.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
@@ -156,11 +189,11 @@ document.addEventListener('DOMContentLoaded', () => {
       mouseX = -1000;
       mouseY = -1000;
     });
-
+ 
     resizeCanvas();
     drawParticles();
   }
-
+ 
   // 4. Typewriter Effect in Hero Section
   const typewriterElement = document.getElementById('typewriter');
   if (typewriterElement) {
@@ -176,10 +209,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingSpeed = 75;
     const deletingSpeed = 40;
     const delayAfterTyped = 2000;
-
+ 
     function typeEffect() {
       const currentRole = roles[roleIndex];
-
+ 
       if (isDeleting) {
         typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
@@ -187,9 +220,9 @@ document.addEventListener('DOMContentLoaded', () => {
         typewriterElement.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
       }
-
+ 
       let timeout = isDeleting ? deletingSpeed : typingSpeed;
-
+ 
       if (!isDeleting && charIndex === currentRole.length) {
         timeout = delayAfterTyped;
         isDeleting = true;
@@ -198,13 +231,13 @@ document.addEventListener('DOMContentLoaded', () => {
         roleIndex = (roleIndex + 1) % roles.length;
         timeout = 400;
       }
-
+ 
       setTimeout(typeEffect, timeout);
     }
-
+ 
     setTimeout(typeEffect, 500);
   }
-
+ 
   // 5. Interactive 3D Tilt on Profile Photo Card
   const photoWrapper = document.getElementById('photoWrapper');
   if (photoWrapper) {
@@ -212,18 +245,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const rect = photoWrapper.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
-
+ 
       const rotateX = (-y / rect.height) * 20;
       const rotateY = (x / rect.width) * 20;
-
+ 
       photoWrapper.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.04)`;
     });
-
+ 
     photoWrapper.addEventListener('mouseleave', () => {
       photoWrapper.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
     });
   }
-
+ 
   // 6. Magnetic Buttons Effect
   const magneticButtons = document.querySelectorAll('.magnetic-btn');
   magneticButtons.forEach((btn) => {
@@ -231,15 +264,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const rect = btn.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
-
+ 
       btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
     });
-
+ 
     btn.addEventListener('mouseleave', () => {
       btn.style.transform = 'translate(0px, 0px)';
     });
   });
-
+ 
   // 7. Ripple Click Effect
   const rippleButtons = document.querySelectorAll('.ripple-btn');
   rippleButtons.forEach((btn) => {
@@ -248,25 +281,25 @@ document.addEventListener('DOMContentLoaded', () => {
       const circle = document.createElement('span');
       const diameter = Math.max(rect.width, rect.height);
       const radius = diameter / 2;
-
+ 
       circle.style.width = circle.style.height = `${diameter}px`;
       circle.style.left = `${e.clientX - rect.left - radius}px`;
       circle.style.top = `${e.clientY - rect.top - radius}px`;
       circle.classList.add('ripple-effect');
-
+ 
       const existingRipple = this.querySelector('.ripple-effect');
       if (existingRipple) {
         existingRipple.remove();
       }
-
+ 
       this.appendChild(circle);
-
+ 
       setTimeout(() => {
         circle.remove();
       }, 600);
     });
   });
-
+ 
   // 8. Intersection Observer Scroll Reveal & Navigation Highlighting
   const revealElements = document.querySelectorAll('[data-reveal]');
   if ('IntersectionObserver' in window) {
@@ -281,24 +314,24 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
     );
-
+ 
     revealElements.forEach((el) => revealObserver.observe(el));
   } else {
     revealElements.forEach((el) => el.classList.add('in-view'));
   }
-
+ 
   // Active Nav Link Observer
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
-
+ 
   function highlightNavOnScroll() {
     const scrollY = window.scrollY;
-
+ 
     sections.forEach((current) => {
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 120;
       const sectionId = current.getAttribute('id');
-
+ 
       if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
         navLinks.forEach((link) => {
           link.classList.remove('active');
@@ -309,20 +342,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
+ 
   window.addEventListener('scroll', highlightNavOnScroll, { passive: true });
-
+ 
   // 9. Skills Category Filter Tabs
   const tabButtons = document.querySelectorAll('.tab-btn');
   const skillCategoryRows = document.querySelectorAll('.skill-category-row');
-
+ 
   tabButtons.forEach((tab) => {
     tab.addEventListener('click', () => {
       tabButtons.forEach((btn) => btn.classList.remove('active'));
       tab.classList.add('active');
-
+ 
       const filter = tab.getAttribute('data-filter');
-
+ 
       skillCategoryRows.forEach((row) => {
         const category = row.getAttribute('data-category');
         if (filter === 'all' || category === filter) {
@@ -341,13 +374,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-
+ 
   // 10. Copy Email to Clipboard & Toast Notifications
   const toastContainer = document.getElementById('toastContainer');
-
+ 
   function showToast(message, type = 'success') {
     if (!toastContainer) return;
-
+ 
     const toast = document.createElement('div');
     toast.className = `toast toast-${type}`;
     
@@ -357,16 +390,16 @@ document.addEventListener('DOMContentLoaded', () => {
       </span>
       <span class="toast-message">${message}</span>
     `;
-
+ 
     toastContainer.appendChild(toast);
-
+ 
     setTimeout(() => {
       toast.style.opacity = '0';
       toast.style.transform = 'translateX(100%)';
       setTimeout(() => toast.remove(), 350);
     }, 3200);
   }
-
+ 
   function handleCopyEmail(email, buttonElement, textElementId) {
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard.writeText(email).then(() => {
@@ -377,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fallbackCopyText(email, textElementId);
     }
   }
-
+ 
   function fallbackCopyText(text, textElementId) {
     const textArea = document.createElement('textarea');
     textArea.value = text;
@@ -385,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
     textArea.style.opacity = '0';
     document.body.appendChild(textArea);
     textArea.select();
-
+ 
     try {
       document.execCommand('copy');
       showToast(`Copied ${text} to clipboard!`, 'success');
@@ -395,7 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     document.body.removeChild(textArea);
   }
-
+ 
   function updateCopyBtnText(textElementId) {
     const el = document.getElementById(textElementId);
     if (el) {
@@ -406,7 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 2000);
     }
   }
-
+ 
   const copyEmailBtn = document.getElementById('copyEmailBtn');
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
@@ -414,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
       handleCopyEmail(email, copyEmailBtn, 'copyBtnText');
     });
   }
-
+ 
   const copyEmailBtnContact = document.getElementById('copyEmailBtnContact');
   if (copyEmailBtnContact) {
     copyEmailBtnContact.addEventListener('click', () => {
@@ -422,27 +455,27 @@ document.addEventListener('DOMContentLoaded', () => {
       handleCopyEmail(email, copyEmailBtnContact, 'copyBtnContactText');
     });
   }
-
+ 
   // 11. Contact Form Submission
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-
+ 
       const name = document.getElementById('formName').value.trim();
       const email = document.getElementById('formEmail').value.trim();
       const message = document.getElementById('formMessage').value.trim();
-
+ 
       if (!name || !email || !message) {
         showToast('Please fill out all required fields.', 'error');
         return;
       }
-
+ 
       const submitBtn = document.getElementById('formSubmitBtn');
       const originalContent = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = `<span>Sending...</span>`;
-
+ 
       setTimeout(() => {
         showToast(`Thank you, ${name}! Your message has been sent successfully.`, 'success');
         contactForm.reset();
@@ -451,14 +484,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1200);
     });
   }
-
+ 
   // 12. Project Live Demo Modal
   const projectModal = document.getElementById('projectModal');
   const modalTitle = document.getElementById('modalTitle');
   const modalBody = document.getElementById('modalBody');
   const modalCloseBtn = document.getElementById('modalCloseBtn');
   const openModalBtns = document.querySelectorAll('.open-modal-btn');
-
+ 
   const projectDetailsMap = {
     '001': {
       title: 'Blood Bank Management System — Technical Overview',
@@ -481,15 +514,15 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     }
   };
-
+ 
   openModalBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       const projId = btn.getAttribute('data-project');
       const data = projectDetailsMap[projId];
-
+ 
       if (data && projectModal && modalBody) {
         modalTitle.textContent = data.title;
-
+ 
         modalBody.innerHTML = `
           <p><strong>System Summary:</strong> ${data.summary}</p>
           <p><strong>Key Highlights &amp; Architecture:</strong></p>
@@ -506,24 +539,24 @@ document.addEventListener('DOMContentLoaded', () => {
             </a>
           </div>
         `;
-
+ 
         projectModal.classList.add('is-open');
         projectModal.setAttribute('aria-hidden', 'false');
       }
     });
   });
-
+ 
   function closeModal() {
     if (projectModal) {
       projectModal.classList.remove('is-open');
       projectModal.setAttribute('aria-hidden', 'true');
     }
   }
-
+ 
   if (modalCloseBtn) {
     modalCloseBtn.addEventListener('click', closeModal);
   }
-
+ 
   if (projectModal) {
     projectModal.addEventListener('click', (e) => {
       if (e.target === projectModal) {
@@ -531,20 +564,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
+ 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && projectModal && projectModal.classList.contains('is-open')) {
       closeModal();
     }
   });
-
+ 
   // 13. Mobile Drawer Navigation Toggle
   const mobileToggle = document.getElementById('mobileToggle');
   const mobileDrawer = document.getElementById('mobileDrawer');
   const drawerClose = document.getElementById('drawerClose');
   const drawerBackdrop = document.getElementById('drawerBackdrop');
   const drawerLinks = document.querySelectorAll('.drawer-link');
-
+ 
   function openDrawer() {
     if (mobileDrawer && mobileToggle) {
       mobileDrawer.classList.add('is-open');
@@ -553,7 +586,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileToggle.setAttribute('aria-expanded', 'true');
     }
   }
-
+ 
   function closeDrawer() {
     if (mobileDrawer && mobileToggle) {
       mobileDrawer.classList.remove('is-open');
@@ -562,7 +595,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileToggle.setAttribute('aria-expanded', 'false');
     }
   }
-
+ 
   if (mobileToggle) mobileToggle.addEventListener('click', () => {
     if (mobileDrawer.classList.contains('is-open')) {
       closeDrawer();
@@ -570,11 +603,14 @@ document.addEventListener('DOMContentLoaded', () => {
       openDrawer();
     }
   });
-
+ 
   if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
   if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
-
+ 
   drawerLinks.forEach((link) => {
     link.addEventListener('click', closeDrawer);
   });
 });
+ 
+
+
